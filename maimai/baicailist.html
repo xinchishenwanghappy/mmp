@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        document.querySelector("html").style.fontSize = window.screen.width / 10 + "px";
+        if (window.screen.width > 375) {
+            document.querySelector("html").style.fontSize = 37.5 + "px";
+        }
+    </script>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="css/baicailist.css">
+    <script src='lib/jq/jquery-3.1.1.min.js'></script>
+    <script src='lib/mui/js/mui.min.js'></script>
+    <script src='lib/artTemplate/template-web.js'></script>
+    <script src='js/baicailist.js'></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header clearfix">
+            <div>
+                <a href="javaScript: void(0)" class="mui-icon mui-icon-arrowleft back"></a>
+                <span>白菜价-淘宝内部券</span>
+                <a href="javascript:;" class="appdown"></a>
+            </div>
+        </div>
+        <div class="main clearfix">
+            <div class='menu'>
+                <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                    <div class="mui-scroll">
+                        <!-- <a class="mui-control-item mui-active">
+                            推荐
+                        </a>
+                        <a class="mui-control-item">
+                            热点
+                        </a>
+                        <a class="mui-control-item">
+                            北京
+                        </a>
+                        <a class="mui-control-item">
+                            社会
+                        </a>
+                        <a class="mui-control-item">
+                            娱乐
+                        </a>
+                        <a class="mui-control-item">
+                            科技
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+            <div class='products'>
+                <!-- 置顶箭头 -->
+                <a href="javaScript: void(0)" class='gotop mui-icon mui-icon-arrowthinup'></a>
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul>
+                            <!-- <li>
+                                <div class='left'>
+                                    <img src="images/baicai/shishi1.jpg" alt="">
+                                </div>
+                                <div class='right'>
+                                    <p class='title'>
+                                        <span>[包邮]</span>
+                                        今日开启
+                                    </p>
+                                    <p class='price'>
+                                        <i>券后</i>
+                                        <em>¥</em>
+                                        0.0
+                                        <del>¥0.0</del>
+                                    </p>
+                                    <div class='bar'>
+                                        <a href="#"></a>
+                                        <i>
+                                            <em style='width: 20%'></em>
+                                            <span>20%</span>
+                                        </i>
+                                        <b>已领112张</b>
+                                    </div>
+                                    <p class='discount'>
+                                        <a href="#">
+                                            点此领10元优惠券
+                                        </a>
+                                        <a href="#">下单连接</a>
+
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class='left'>
+                                    <img src="images/baicai/shishi1.jpg" alt="">
+                                </div>
+                                <div class='right'>
+                                    <p class='title'>
+                                        <span>[包邮]</span>
+                                        今日开启
+                                    </p>
+                                    <p class='price'>
+                                        <i>券后</i>
+                                        <em>¥</em>
+                                        0.0
+                                        <del>¥0.0</del>
+                                    </p>
+                                    <div class='bar'>
+                                        <a href="#"></a>
+                                        <i>
+                                            <em style='width: 2%'></em>
+                                            <span>2%</span>
+                                        </i>
+                                        <b>已领112张</b>
+                                    </div>
+                                    <p class='discount'>
+                                        <a href="#">
+                                            点此领10元优惠券
+                                        </a>
+                                        <a href="#">下单连接</a>
+
+                                    </p>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer clearfix">
+            <div class="top">
+                <a href="javaScript: void(0)" class="login">登录</a>
+                <a href="javaScript: void(0)" class="regedit">注册</a>
+                <a href="javaScript: void(0)" class="gotop">
+                    <img src="images/top.jpg" alt="">
+                    <span>返回顶部</span>
+                </a>
+            </div>
+            <div class="bottom">
+                <p>
+                    <a href="">手机APP下载</a>
+                    <span>慢慢买手机版&nbsp;--&nbsp;掌上比价平台</span>
+                </p>
+                <span> m.manmanbuy.com </span>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script type='text/html' id='menulist'>
+    {{each result v i}}
+    <a href='javaScript: void(0)'  data-id='{{v.titleId}}' class='mui-control-item {{if i == 0}} mui-active {{/if}} '>{{v.title}}</a>
+    {{/each}}
+</script>
+
+<script type='text/html' id='lists'>
+    {{each result v i}}
+    {{if i < length}}
+    <li>
+        <div class='left'>
+            {{#v.productImg}}
+        </div>
+        <div class='right'>
+            <p class='title'>
+                {{#v.productName}}
+            </p>
+            <p class='price'>
+               {{#v.productPrice}}
+            </p>
+            <div class='bar'>
+                {{#v.productCouponRemain}}
+            </div>
+            <p class='discount'>
+               {{#v.productCoupon}}
+               {{#v.productHref}}
+            </p>
+        </div>
+    </li>
+    {{/if}}
+    {{/each}}
+</script>
+
+</html>

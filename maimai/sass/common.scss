@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// rem与px转换
+@function pr($p) {
+    @return $p/37.5+rem;
+}
+
+// 公共颜色
+$mmcolor:#ff841d;
+ul,
+ol {
+    list-style: none;
+}
+
+input {
+    border: 0;
+    outline: none;
+}
+
+img {
+    display: block;
+    vertical-align: top;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-size: 14px;
+   
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+// 右浮动
+.fr {
+    float: right;
+}
+
+// 左浮动
+.fl {
+    float: left;
+}
+
+//清除浮动
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+// 头部样式
+.container {
+    display: flex;
+    flex-direction: column;
+    .header {
+        background-color: $mmcolor;
+        height: pr(50);
+        padding: pr(0) pr(10);
+        display: flex;
+        justify-content: space-between;
+        .log {
+            height: 100%;
+            flex: 1;
+            background: url('../images/log.png') no-repeat left center/ auto pr(25);
+        }
+        .appdown {
+            width: pr(50);
+            height: pr(50);
+            background: url('../images/appdown.png') no-repeat center center /pr(34) auto;
+        }
+    }
+    //     main样式
+    .main {
+        flex: 1;
+    }
+    // 尾部样式
+    .footer {
+        height: pr(100);
+        background-color: #efefef;
+        .top {
+            height: pr(40);
+            display: flex;
+            a {
+                width: 33.3333%;
+                height: 100%;
+                border: 1px solid #ccc;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #5a5a5a;
+                &:nth-child(1) {
+                    border-left: 0;
+                    border-right: 0;
+                }
+                &:nth-child(3) {
+                    border-right: 0;
+                    border-left: 0;
+                }
+            }
+            .gotop {
+                display: flex;
+                align-items: center;
+                img {
+                    width: pr(15);
+                    height: pr(15);
+                    margin-right: pr(5);
+                    position: relative;
+                    bottom: 1px;
+                }
+            }
+        }
+        .bottom {
+            height: pr(60);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 12px;
+            p {
+                text-align: center;
+                a {
+                    color: #f00;
+                }
+                span {
+                    color: #5a5a5a;
+                }
+            }
+            span {
+                text-align: center;
+                color: #666;
+            }
+        }
+    }
+}

@@ -1,0 +1,318 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input {
+  border: 0;
+  outline: none;
+}
+
+img {
+  display: block;
+  vertical-align: top;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 14px;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container .header {
+  background-color: #ff841d;
+  height: 1.3333333333rem;
+  padding: 0rem 0.2666666667rem;
+  display: flex;
+  justify-content: space-between;
+}
+.container .header .log {
+  height: 100%;
+  flex: 1;
+  background: url("../images/log.png") no-repeat left center/auto 0.6666666667rem;
+}
+.container .header .appdown {
+  width: 1.3333333333rem;
+  height: 1.3333333333rem;
+  background: url("../images/appdown.png") no-repeat center center/0.9066666667rem auto;
+}
+.container .main {
+  flex: 1;
+}
+.container .footer {
+  height: 2.6666666667rem;
+  background-color: #efefef;
+}
+.container .footer .top {
+  height: 1.0666666667rem;
+  display: flex;
+}
+.container .footer .top a {
+  width: 33.3333%;
+  height: 100%;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5a5a5a;
+}
+.container .footer .top a:nth-child(1) {
+  border-left: 0;
+  border-right: 0;
+}
+.container .footer .top a:nth-child(3) {
+  border-right: 0;
+  border-left: 0;
+}
+.container .footer .top .gotop {
+  display: flex;
+  align-items: center;
+}
+.container .footer .top .gotop img {
+  width: 0.4rem;
+  height: 0.4rem;
+  margin-right: 0.1333333333rem;
+  position: relative;
+  bottom: 1px;
+}
+.container .footer .bottom {
+  height: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 12px;
+}
+.container .footer .bottom p {
+  text-align: center;
+}
+.container .footer .bottom p a {
+  color: #f00;
+}
+.container .footer .bottom p span {
+  color: #5a5a5a;
+}
+.container .footer .bottom span {
+  text-align: center;
+  color: #666;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .header {
+  flex-basis: 1.1733333333rem;
+  background-color: #f4483e;
+}
+.container .header > div {
+  height: 1.1733333333rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .header > div a {
+  color: #fff;
+  font-weight: bold;
+  flex-basis: 1.1733333333rem;
+}
+.container .header > div span {
+  flex: 1;
+  text-align: center;
+  font-size: 0.4533333333rem;
+  color: #fff;
+}
+.container .main {
+  flex: 1;
+  background-color: #efeff4;
+  display: flex;
+  flex-direction: column;
+}
+.container .main .menu {
+  background-color: #fff;
+  position: relative;
+  flex-basis: 1.3333333333rem;
+  margin-bottom: 0.2666666667rem;
+}
+.container .main .menu .mui-scroll-wrapper {
+  height: 100%;
+}
+.container .main .menu .mui-scroll-wrapper .mui-segmented-control.mui-scroll-wrapper {
+  height: 100%;
+}
+.container .main .menu .mui-segmented-control.mui-scroll-wrapper .mui-scroll {
+  height: 100%;
+}
+.container .main .menu .mui-segmented-control .mui-control-item {
+  height: 100%;
+  line-height: 1.3333333333rem;
+}
+.container .main .menu .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+  border-color: #fe4a65;
+  color: #fe4a65;
+}
+.container .main .products {
+  flex: 1;
+  position: relative;
+}
+.container .main .products .gotop {
+  position: absolute;
+  bottom: 0.8rem;
+  right: 0.2133333333rem;
+  display: none;
+  z-index: 999;
+  width: 1.1733333333rem;
+  text-align: center;
+  line-height: 1.0666666667rem;
+  height: 1.0666666667rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 1.0666666667rem;
+  color: #ccc;
+}
+.container .main .products ul li {
+  background-color: #fff;
+  display: flex;
+  height: 4.1333333333rem;
+  padding: 0.2666666667rem 0.1333333333rem;
+  margin-bottom: 0.2666666667rem;
+}
+.container .main .products ul li .left {
+  flex-basis: 3.7333333333rem;
+  margin-right: 0.1333333333rem;
+}
+.container .main .products ul li .left img {
+  width: 100%;
+  height: 100%;
+}
+.container .main .products ul li .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container .main .products ul li .right .title {
+  font-size: 0.3733333333rem;
+  color: #000;
+}
+.container .main .products ul li .right .price {
+  color: #fc4a4f;
+  font-size: 0.4266666667rem;
+}
+.container .main .products ul li .right .price i {
+  font-size: 0.3733333333rem;
+  margin-right: 0.1333333333rem;
+}
+.container .main .products ul li .right .price em {
+  font-size: 0.32rem;
+}
+.container .main .products ul li .right .price del {
+  margin-left: 0.2666666667rem;
+  font-size: 0.32rem;
+  color: #8f8f94;
+}
+.container .main .products ul li .right .bar {
+  display: flex;
+}
+.container .main .products ul li .right .bar i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5333333333rem;
+  height: 0.4266666667rem;
+  border: 0.0266666667rem solid #fc4a4f;
+  border-radius: 0.2133333333rem;
+  background-color: #ffb7b7;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.container .main .products ul li .right .bar i em {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  background-color: #fc4a4f;
+}
+.container .main .products ul li .right .bar b {
+  color: #fc4a4f;
+  margin-left: 0.2133333333rem;
+}
+.container .main .products ul li .right .discount {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  margin-top: 0.1333333333rem;
+}
+.container .main .products ul li .right .discount a:first-child {
+  border: 0.0266666667rem dashed #ffb7b7;
+  color: #fc4a4f;
+  padding: 0.0533333333rem 0.08rem;
+  font-size: 0.32rem;
+}
+.container .main .products ul li .right .discount a:last-child {
+  padding: 0.08rem 0.1066666667rem;
+  color: #fff;
+  background-color: #fc4a4f;
+  font-size: 0.32rem;
+  border-radius: 0.1066666667rem;
+}
+.container .footer {
+  flex-basis: 2.6666666667rem;
+}
+
+.goTop {
+  position: position;
+  bottom: 1.8666666667rem;
+  right: 0.2133333333rem;
+  display: none;
+  z-index: 999;
+  width: 1.1733333333rem;
+  text-align: center;
+  line-height: 1.0666666667rem;
+  height: 1.0666666667rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.85);
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/*# sourceMappingURL=baicailist.css.map */

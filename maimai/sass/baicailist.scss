@@ -1,0 +1,193 @@
+@import "./common.scss";
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .header {
+        flex-basis: pr(44);
+        background-color: #f4483e;
+       >div {
+           height: pr(44);
+           width: 100%;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           a {
+               color: #fff;
+               font-weight: bold;
+               flex-basis: pr(44)
+            //    &.appdown {
+            //        height: pr(44);
+            //        width: pr(44);
+            //    }
+           }
+           span {
+               flex: 1;
+               text-align: center;
+               font-size: pr(17);
+               color: #fff;
+           }
+       }
+    }
+    .main {
+        flex: 1;
+        background-color: #efeff4;
+        display: flex;
+        flex-direction: column;
+        .menu {
+            background-color: #fff;
+            position: relative;
+            flex-basis: pr(50);
+            margin-bottom: pr(10);
+            .mui-scroll-wrapper {
+                height: 100%;
+                .mui-segmented-control.mui-scroll-wrapper {
+                    height: 100%;
+                }
+            } 
+            .mui-segmented-control.mui-scroll-wrapper .mui-scroll {
+                height: 100%; 
+            }
+            .mui-segmented-control .mui-control-item {
+                height: 100%;
+                line-height: pr(50);
+            }
+            .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+                border-color: #fe4a65;
+                color: #fe4a65;
+            }
+        }
+        .products {
+            flex: 1;
+            position: relative;
+            // 置顶
+            .gotop {
+               position: absolute;
+               bottom: pr(30);
+               right: pr(8);
+               display: none;
+               z-index: 999;
+               width: pr(44);
+               text-align: center;
+               line-height: pr(40);
+               height: pr(40);
+               border-radius: 50%;
+               background-color: rgba(0,0,0,.5);
+               font-size: pr(40);
+               color: #ccc;
+            }
+            ul {
+                // background-color: #efeff4;
+                li {
+                    background-color: #fff;
+                    display: flex;
+                    height: pr(155);
+                    padding: pr(10) pr(5);
+                    margin-bottom: pr(10);
+                    .left {
+                        flex-basis: pr(140);
+                        margin-right: pr(5);
+                        img {
+                           width: 100%;
+                           height: 100%;
+                        }
+                    } 
+                    .right {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .title {
+                            font-size: pr(14);
+                            color: #000;
+                        }
+                        .price {
+                            color: #fc4a4f;
+                            font-size: pr(16);
+                            i {
+                                font-size: pr(14);
+                                margin-right: pr(5);
+                            }
+                            em {
+                                font-size: pr(12);
+                            }
+                            del {
+                                margin-left: pr(10);
+                                font-size: pr(12);
+                                color: #8f8f94;
+                            }
+                        }
+                        .bar {
+                            display: flex;
+                          i {
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              width: pr(95);
+                              height: pr(16);
+                              border: pr(1) solid #fc4a4f;
+                              border-radius: pr(8);
+                              background-color: #ffb7b7;
+                              color: #fff;
+                              position: relative;
+                              overflow: hidden;
+                              em {
+                                position: absolute;
+                                left: 0;
+                                height: 100%;
+                                background-color: #fc4a4f;
+                              }
+                          }  
+                          b {
+                              color: #fc4a4f;
+                              margin-left: pr(8);
+                          }
+                        }
+                        .discount {
+                            display: flex;
+                            justify-content: space-between;
+                            margin: 0;
+                            margin-top: pr(5);
+                            a {
+                                &:first-child {
+                                  
+                                    border:pr(1) dashed #ffb7b7;
+                                    color: #fc4a4f;
+                                    padding: pr(2) pr(3);
+                                    font-size: pr(12);
+                                }
+                                &:last-child {
+                                    padding: pr(3) pr(4);
+                                    color: #fff;
+                                    background-color: #fc4a4f;
+                                    font-size: pr(12);
+                                    border-radius: pr(4);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        flex-basis: pr(100);
+    }
+}
+
+// 置顶
+.goTop {
+    position: position;
+    bottom: pr(70);
+    right: pr(8);
+    display: none;
+    z-index: 999;
+    width: pr(44);
+    text-align: center;
+    line-height: pr(40);
+    height: pr(40);
+    border-radius: 50%;
+    background-color: rgba(255,255,255,.85);
+    font-size: pr(30);
+    color: #666;
+}

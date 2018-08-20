@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        document.querySelector("html").style.fontSize = window.screen.width / 10 + "px";
+        if (window.screen.width > 375) {
+            document.querySelector("html").style.fontSize = 37.5 + "px";
+        }
+    </script>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="css/baicai.css">
+    <script src='lib/jq/jquery-3.1.1.min.js'></script>
+    <script src='lib/mui/js/mui.min.js'></script>
+    <script src='lib/artTemplate/template-web.js'></script>
+    <script src='js/baicai.js'></script>
+</head>
+
+<body>
+    <div class='container'>
+        <div class='header'>
+            <div>
+                <a href="javaScript: void(0)" class="main-logo">白菜价</a>
+                <div class='search'>
+                    <button>
+                        <i class='mui-icon mui-icon-search'></i>
+                    </button>
+                    <input type="text" placeholder="好宝贝 等你搜">
+                </div>
+                <a href="javaScript: void(0)" class="main-cat mui-icon mui-icon-list"></a>
+            </div>
+        </div>
+        <div class='main'>
+            <div class="mui-slider">
+                <div class="mui-slider-group mui-slider-loop">
+                    <!--支持循环，需要重复图片节点-->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                            <img src="images/baicai/baicai4.jpg" />
+                        </a>
+                    </div>
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="images/baicai/baicai1.jpg" />
+                        </a>
+                    </div>
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="images/baicai/baicai2.jpg" />
+                        </a>
+                    </div>
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="images/baicai/baicai3.jpg" />
+                        </a>
+                    </div>
+                    <div class="mui-slider-item">
+                        <a href="#">
+                            <img src="images/baicai/baicai4.jpg" />
+                        </a>
+                    </div>
+                    <!--支持循环，需要重复图片节点-->
+                    <div class="mui-slider-item mui-slider-item-duplicate">
+                        <a href="#">
+                            <img src="images/baicai/baicai1.jpg" />
+                        </a>
+                    </div>
+                </div>
+                <div class="mui-slider-indicator">
+                    <div class="mui-indicator mui-active"></div>
+                    <div class="mui-indicator"></div>
+                    <div class="mui-indicator"></div>
+                    <div class="mui-indicator"></div>
+                </div>
+            </div>
+            <div class='submenu'>
+                <a href="./baicailist.html?titleid=1" class='animated slideInLeft delay-0s'>
+                    <img src="images/baicai/rexiao.png" alt="">
+                    <span>热销</span>
+                </a>
+                <a href="./baicailist.html?titleid=2" class='animated slideInLeft delay-1s'>
+                    <img src="images/baicai/9.9.png" alt="">
+                    <span>9.9包邮</span>
+                </a>
+                <a href="./baicailist.html?titleid=3" class='animated slideInRight delay-0'>
+                    <img src="images/baicai/19.png" alt="">
+                    <span>19块邮</span>
+                </a>
+                <a href="javaScript: void(0)" class='animated slideInRight delay-1s'>
+                    <img src="images/baicai/reqi.png" alt="">
+                    <span>超级人气榜</span>
+                </a>
+            </div>
+            <div class='shoufa-box'>
+                <div class='title'>
+                    <h3>热销</h3>
+                    <a href="./baicailist.html?titleid=1">更多</a>
+                </div>
+                <div class='shoufa-list'>
+                    <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                        <div class="mui-scroll">
+                            <div class="mui-control-item">
+                                <a href="javaScript: void(0)"></a>
+                                <!-- 模板渲染 -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='you-box'>
+                <div class='title'>
+                    <h3>商家优惠信息 实时直播</h3>
+                </div>
+                <div class='goods-list'>
+                    <ul>
+                        <li>
+                            <p class='discount'>
+                                <a href="#">
+                                    点此领10元优惠券
+                                </a>
+                            </p>
+                            <img src="images/baicai/shishi1.jpg" alt="">
+                            <p>
+                                诺澳 海洋球池折叠波波池布制帐篷海洋球池室内外儿童帐篷
+                            </p>
+                            <p>
+                                <i>券后</i>
+                                <em>￥38.00</em>
+                                <del>40</del>
+                            </p>
+                        </li>
+                        <li>
+                            <img src="images/baicai/shishi2.jpg" alt="">
+                            <p>
+                                诺澳 海洋球池折叠波波池布制帐篷海洋球池室内外儿童帐篷
+                            </p>
+                            <p>
+                                <i>券后</i>
+                                <em>￥38.00</em>
+                                <del>40</del>
+                            </p>
+                        </li>
+                        <li>
+                            <img src="images/baicai/shishi3.jpg" alt="">
+                            <p>
+                                诺澳 海洋球池折叠波波池布制帐篷海洋球池室内外儿童帐篷
+                            </p>
+                            <p>
+                                <i>券后</i>
+                                <em>￥38.00</em>
+                                <del>40</del>
+                            </p>
+                        </li>
+                        <li>
+                            <img src="images/baicai/shishi4.jpg" alt="">
+                            <p>
+                                诺澳 海洋球池折叠波波池布制帐篷海洋球池室内外儿童帐篷
+                            </p>
+                            <p>
+                                <i>券后</i>
+                                <em>￥38.00</em>
+                                <del>40</del>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 遮罩层 -->
+    <div class='mask'>
+        <ul class='menu-content'>
+            <li>全部</li>
+            <li>全部</li>
+            <li>全部</li>
+            <li>全部</li>
+            <li>全部</li>
+            <li>全部</li>
+            <li>全部</li>
+            <li>全部</li>
+            <li>全部</li>
+            <li>全部</li>
+            <li>全部</li>
+            <li>全部</li>
+            <li>全部</li>
+        </ul>
+        <div>
+            <span class='close'>
+                收起分类
+            </span>
+        </div>
+    </div>
+    <!-- 置顶箭头 -->
+    <a href="javaScript: void(0)" class='gotop mui-icon mui-icon-arrowthinup'></a>
+</body>
+<script type='text/html' id='menulist'>
+    {{each result v}}
+    <li>{{v.title}}
+        <a href="./baicailist.html?titleid={{v.titleId}}"></a>
+    </li>
+    {{/each}}
+</script>
+
+<script type='text/html' id='hot'>
+    {{each result v i}}
+    {{if i < 5}}
+    <div class="mui-control-item">
+        {{#v.productHref}}
+        {{#v.productImg}}
+        <p>{{#v.productName}}</p>
+        <p>
+           {{#v.productPrice}}
+        </p>
+    </div>
+    {{/if}}
+    {{/each}}
+</script>
+<script type='text/html' id='discount'>
+    {{each result v}}
+    <li>
+        {{#v.productHref}}
+        <p class='discount'>
+            {{#v.productCoupon}}
+        </p>
+        {{#v.productImg}}
+        <p>
+                <p>{{#v.productName}}</p>
+        </p>
+        <p>
+            {{#v.productPrice}}
+        </p>
+    </li>
+    {{/each}}
+</script>
+
+</html>
